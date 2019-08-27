@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#"
+     xml:base="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:country="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#">
+    <owl:Ontology rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country">
+        <owl:versionIRI rdf:resource="urn:absolute:0.0.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#borders -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#borders">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+        <rdfs:range rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This defines the border of the country.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#containsState -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#containsState">
+        <owl:inverseOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isCapitalOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isCapitalOf">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isLocatedIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isLocatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#City"/>
+        <rdfs:range rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#State"/>
+        <rdfs:range rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#nearbyCountry -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#nearbyCountry">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isLocatedIn"/>
+            <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#borders"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#population -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#population">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#CentralEuropeanCountry -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#CentralEuropeanCountry">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeanCountry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#borders"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeanCountry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#City -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#City">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Place"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is base class for all cities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeNeighborCountry -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeNeighborCountry">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#NonEuropeanCountry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#borders"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeanCountry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeanCountry -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeanCountry">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#GermanCity -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#GermanCity">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#City"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#isLocatedIn"/>
+                <owl:hasValue rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Germany"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#IslandCountry -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#IslandCountry">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#borders"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#NonEuropeanCountry -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#NonEuropeanCountry">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeanCountry"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#NorthernCountry -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#NorthernCountry">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#NorthernEuropeanCountry -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#NorthernEuropeanCountry">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeanCountry"/>
+                    <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#NorthernCountry"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Place -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Place"/>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Region -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Region">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+                    <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#State"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#State -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#State">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Berlin -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Berlin">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#GermanCity"/>
+        <isCapitalOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Germany"/>
+        <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500000</population>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Germany -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Germany">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeanCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Iceland -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Iceland">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#EuropeanCountry"/>
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#IslandCountry"/>
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#NorthernCountry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#City"/>
+            <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#Country"/>
+            <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/country#State"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
