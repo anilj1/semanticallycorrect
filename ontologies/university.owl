@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/anilj1/semanticallycorrect/ontologies/university#"
+     xml:base="https://github.com/anilj1/semanticallycorrect/ontologies/university"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:university="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#">
+    <owl:Ontology rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/university"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#studies -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#studies">
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student"/>
+        <rdfs:range rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#teaches -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#teaches">
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer"/>
+        <rdfs:range rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#first_name -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#first_name">
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#last_name -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#last_name">
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#staff_id -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#staff_id">
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#student_id -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#student_id">
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CSModule -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CSModule">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#MathModule -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#MathModule">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Module -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Module"/>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Person -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Person"/>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CS101 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CS101">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CS103 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CS103">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer1">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer"/>
+        <university:teaches rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CS103"/>
+        <university:teaches rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#M201"/>
+        <university:first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Larisa</university:first_name>
+        <university:last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soldatova</university:last_name>
+        <university:staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">417686</university:staff_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer2">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#M201 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#M201">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#M204 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#M204">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student1">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student"/>
+        <university:studies rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CS101"/>
+        <university:studies rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#M201"/>
+        <university:studies rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#M204"/>
+        <university:first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josef</university:first_name>
+        <university:last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baker</university:last_name>
+        <university:student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">266814</university:student_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student2 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student2">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student"/>
+        <university:studies rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#M204"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student3 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student3">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student"/>
+        <university:studies rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CS103"/>
+        <university:studies rdf:resource="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#M201"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#CSModule"/>
+            <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Lecturer"/>
+            <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#MathModule"/>
+            <rdf:Description rdf:about="https://github.com/anilj1/semanticallycorrect/blob/master/ontologies/university#Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
