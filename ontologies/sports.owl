@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/anilj1/semanticallycorrect/ontologies/sports#"
+     xml:base="https://github.com/anilj1/semanticallycorrect/ontologies/sports"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sports="https://github.com/anilj1/semanticallycorrect/ontologies/sports#">
+    <owl:Ontology rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#hasFavoriteSports -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#hasFavoriteSports">
+        <rdfs:domain rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Person"/>
+        <rdfs:range rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#FavoriteSport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#FavoriteSport -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#FavoriteSport"/>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#IndoorSports -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#IndoorSports">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#FavoriteSport"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#Lecturer -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Lecturer">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#OutdoorSports -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#OutdoorSports">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#FavoriteSport"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#Person -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Person"/>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#Student -->
+
+    <owl:Class rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Student">
+        <rdfs:subClassOf rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Lecturer1">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Lecturer"/>
+        <hasFavoriteSports rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#TableTenis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#Rugby -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Rugby">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#OutdoorSports"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#Student1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Student1">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Student"/>
+        <hasFavoriteSports rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#Rugby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/anilj1/semanticallycorrect/ontologies/sports#TableTenis -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/anilj1/semanticallycorrect/ontologies/sports#TableTenis">
+        <rdf:type rdf:resource="https://github.com/anilj1/semanticallycorrect/ontologies/sports#IndoorSports"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
